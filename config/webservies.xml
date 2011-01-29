@@ -2,8 +2,14 @@
 <dmz>
 <plugin-list>
    <plugin name="dmzWebServicesModuleQt" scope="web-services"/>
+   <!-- <plugin name="dmzArchivePluginObject" scope="web-archive-object"/> -->
 </plugin-list>
 <web-services>
+  <archive name="WebServices_Archive"/>
+  <include>
+    <type name="Device"/>
+    <type name="Software"/>
+  </include>
 </web-services>
 <runtime>
    <object-type name="Player"/>
@@ -12,18 +18,25 @@
    <archive name="WebServices_Archive" version="0"/>
 </archive-module>
 <archive-object>
-   <archive-scope>
-      <string value="archive"/>
-   </archive-scope>
    <filter name="WebServices_Archive">
       <object-type-set>
         <object-type name="Tool"/>
         <object-type name="Player"/>
       </object-type-set>
-      <attribute name="WebServices_Publish" contains="False">
-        <mask name="flag"/>
-      </attribute>
    </filter>
+   <archive name="Archive Name" mode="import|export">
+         <object-type-set>
+            <object-type name="Object Type Name" exclude="Boolean Value"/>
+            <!-- more object types -->
+            <object-type name="Last Object Type Name"/>
+         </object-type-set>
+         <attribute name="Object Attribute Name" contains="Boolean Value">
+            <mask name="Mask Name"/>
+            <!-- more mask names -->
+         </attribute>
+         <state name="State Names" attribute="Attribute Name"/>
+         <!-- more object attributes -->
+      </archive>
 </archive-object>
 <archive>
    <object name="hil" type="Player">
