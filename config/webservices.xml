@@ -18,6 +18,9 @@
    <archive name="WebServices_Archive" version="0"/>
 </archive-module>
 <archive-object>
+   <archive-scope>
+      <string value="archive"/>
+   </archive-scope>
    <filter name="WebServices_Archive">
       <object-type-set>
         <object-type name="Tool"/>
