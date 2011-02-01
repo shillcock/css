@@ -27,7 +27,7 @@
         <object-type name="Player"/>
       </object-type-set>
    </filter>
-   <archive name="Archive Name" mode="import|export">
+<!--   <archive name="Archive Name" mode="import|export">
          <object-type-set>
             <object-type name="Object Type Name" exclude="Boolean Value"/>
             <!-- more object types -->
@@ -39,7 +39,7 @@
          </attribute>
          <state name="State Names" attribute="Attribute Name"/>
          <!-- more object attributes -->
-      </archive>
+      </archive>-->
 </archive-object>
 <archive>
    <object name="hil" type="Player">
