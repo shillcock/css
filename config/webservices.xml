@@ -27,19 +27,20 @@
         <object-type name="Player"/>
       </object-type-set>
    </filter>
-<!--   <archive name="Archive Name" mode="import|export">
-         <object-type-set>
-            <object-type name="Object Type Name" exclude="Boolean Value"/>
-            <!-- more object types -->
-            <object-type name="Last Object Type Name"/>
-         </object-type-set>
-         <attribute name="Object Attribute Name" contains="Boolean Value">
-            <mask name="Mask Name"/>
-            <!-- more mask names -->
-         </attribute>
-         <state name="State Names" attribute="Attribute Name"/>
-         <!-- more object attributes -->
-      </archive>-->
+   <archive name="Archive Name" mode="import|export">
+      <object-type-set>
+         <object-type name="Object Type Name" exclude="Boolean Value"/>
+         <!-- more object types -->
+         <object-type name="Last Object Type Name"/>
+      </object-type-set>
+      <attribute name="Object Attribute Name" contains="Boolean Value">
+         <mask name="Mask Name"/>
+         <!-- more mask names -->
+      </attribute>
+      <state name="State Names" attribute="Attribute Name"/>
+      <!-- more object attributes -->
+   </archive>
+      
 </archive-object>
 <archive>
    <object name="hil" type="Player">
