@@ -2,7 +2,8 @@
 <dmz>
 <plugin-list>
    <plugin name="dmzWebServicesModuleQt" scope="web-services"/>
-   <!-- <plugin name="dmzArchivePluginObject" scope="web-archive-object"/> -->
+   <plugin name="dmzObjectPluginWebServices" scope="web-services-object"/>
+   <plugin name="dmzWebServicesPluginAutoTrackUndo"/>
 </plugin-list>
 <web-services>
   <archive name="WebServices_Archive"/>
@@ -10,7 +11,11 @@
     <type name="Device"/>
     <type name="Software"/>
   </include>
+  <server db="test">
+  </server>
 </web-services>
+<web-services-object>
+</web-services-object>
 <runtime>
    <object-type name="Player"/>
  </runtime>
@@ -40,7 +45,6 @@
       <state name="State Names" attribute="Attribute Name"/>
       <!-- more object attributes -->
    </archive>
-      
 </archive-object>
 <archive>
    <object name="hil" type="Player">
