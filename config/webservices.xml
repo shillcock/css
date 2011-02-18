@@ -6,50 +6,28 @@
    <plugin name="dmzWebServicesPluginAutoTrackUndo"/>
 </plugin-list>
 <web-services>
-  <archive name="WebServices_Archive"/>
-  <include>
-    <type name="Device"/>
-    <type name="Software"/>
-  </include>
-  <server db="bordergame">
+  <server db="stance">
   <!-- <server host="dmz.couchone.com" db="test"> -->
   <!-- <server host="games.chds.us" port="443" path="/db/" db="test"> -->
 <!--     <proxy host="localhost" port="8888"/>-->
   </server>
-  
 </web-services>
 <web-services-object>
-</web-services-object>
-<runtime>
-   <object-type name="Player"/>
- </runtime>
-<archive-module>
-   <archive name="WebServices_Archive" version="0"/>
-</archive-module>
-<archive-object>
-   <archive-scope>
-      <string value="archive"/>
-   </archive-scope>
-   <filter name="WebServices_Archive">
+   <filter>
       <object-type-set>
         <object-type name="Tool"/>
         <object-type name="Player"/>
       </object-type-set>
-   </filter>
-   <archive name="Archive Name" mode="import|export">
-      <object-type-set>
-         <object-type name="Object Type Name" exclude="Boolean Value"/>
-         <!-- more object types -->
-         <object-type name="Last Object Type Name"/>
-      </object-type-set>
-      <attribute name="Object Attribute Name" contains="Boolean Value">
-         <mask name="Mask Name"/>
-         <!-- more mask names -->
+      <attribute name="Object_Select_Attribute">
+         <mask name="flag"/>
       </attribute>
-      <state name="State Names" attribute="Attribute Name"/>
-      <!-- more object attributes -->
-   </archive>
-</archive-object>
+      <state name="Selected"/>
+      <state name="Highlight"/>
+   </filter>
+</web-services-object>
+<runtime>
+   <object-type name="Player"/>
+ </runtime>
 <archive>
    <object name="hil" type="Player">
       <attributes name="Object_Human_In_The_Loop">
