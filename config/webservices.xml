@@ -3,7 +3,7 @@
 <plugin-list>
    <plugin name="dmzWebServicesModuleQt" scope="web-services"/>
    <plugin name="dmzObjectPluginWebServices" scope="web-services-object"/>
-   <plugin name="dmzWebServicesPluginAutoTrackUndo"/>
+   <plugin name="dmzQtPluginLoginDialog" scope="login-dialog"/>
 </plugin-list>
 <web-services>
   <server db="stance">
@@ -24,7 +24,20 @@
       <state name="Selected"/>
       <state name="Highlight"/>
    </filter>
+   <target name="dmzQtPluginLoginDialog"/>
 </web-services-object>
+<login-dialog>
+   <username name="WebServices_Username"/>
+   <password name="WebServices_Password"/>
+   <message
+      login-required="WebServices_Login_Required"
+      login="WebServices_Login"
+      login-success="WebServices_Login_Success"
+      login-failed="WebServices_Login_Failed"
+      logout="WebServices_Logout">
+   </message>
+   <target name="dmzWebServicesModuleQt"/>
+</login-dialog>
 <runtime>
    <object-type name="Player"/>
  </runtime>
